@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpiceBite | Food Menu & CRUD Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">🌶️ SpiceBite</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu & Order</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="auth-link"><a href="login.html">Login / Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1 class="section-title">Our Delicious Menu</h1>
+            <div id="menu-grid" class="grid-container"></div>
+        </section>
+
+        <section class="form-container">
+            <h2 class="section-title">Manage Menu Item (CRUD Operations)</h2>
+            <div id="crud-msg" class="alert"></div>
+            <form id="product-form" onsubmit="handleProductSubmit(event)">
+                <input type="hidden" id="product-id">
+                <div class="form-group">
+                    <label for="food-name">Food Name *</label>
+                    <input type="text" id="food-name" placeholder="e.g., Tandoori Chicken Pizza" required>
+                </div>
+                <div class="form-group">
+                    <label for="food-category">Category *</label>
+                    <select id="food-category" required>
+                        <option value="Burger">Burger</option>
+                        <option value="Pizza">Pizza</option>
+                        <option value="Rice">Rice & Biryani</option>
+                        <option value="Pasta">Pasta</option>
+                        <option value="Snacks">Snacks</option>
+                        <option value="Dessert">Dessert</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="food-price">Price (BDT ৳) *</label>
+                    <input type="number" id="food-price" min="1" step="0.01" placeholder="350" required>
+                </div>
+                <div class="form-group">
+                    <label for="food-image">Image URL (Optional)</label>
+                    <input type="url" id="food-image" placeholder="https://images.unsplash.com/...">
+                </div>
+                <div class="form-group">
+                    <label for="food-desc">Description *</label>
+                    <textarea id="food-desc" rows="3" placeholder="Describe the ingredients and taste..." required></textarea>
+                </div>
+                <button type="submit" id="form-submit-btn" class="btn">Add Food Item</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SpiceBite Restaurant. All Rights Reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

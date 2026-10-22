@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpiceBite | Login & Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">🌶️ SpiceBite</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu & Order</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="auth-link"><a href="login.html" class="active">Login / Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="section-title">User Authentication</h1>
+        <section class="auth-wrapper">
+            <article class="form-container" style="margin: 0;">
+                <h2>Login to Account</h2>
+                <div id="login-msg" class="alert"></div>
+                <form id="login-form" onsubmit="handleLoginSubmit(event)" novalidate>
+                    <div class="form-group">
+                        <label for="login-email">Email Address *</label>
+                        <input type="email" id="login-email" placeholder="Enter registered email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password *</label>
+                        <input type="password" id="login-password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </article>
+
+            <article class="form-container" style="margin: 0;">
+                <h2>New User Registration</h2>
+                <div id="reg-msg" class="alert"></div>
+                <form id="register-form" onsubmit="handleRegisterSubmit(event)" novalidate>
+                    <div class="form-group">
+                        <label for="reg-name">Full Name *</label>
+                        <input type="text" id="reg-name" placeholder="Minimum 3 characters" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email Address *</label>
+                        <input type="email" id="reg-email" placeholder="valid@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Password *</label>
+                        <input type="password" id="reg-password" placeholder="Minimum 6 characters" required>
+                    </div>
+                    <button type="submit" class="btn">Register Now</button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SpiceBite Restaurant. All Rights Reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

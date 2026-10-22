@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpiceBite | Contact & Feedback</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">🌶️ SpiceBite</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu & Order</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li id="auth-link"><a href="login.html">Login / Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h1 class="section-title">Contact Us / Send Feedback</h1>
+            <p style="text-align:center; margin-bottom: 1.5rem;">Have a question or feedback? Fill out the form below and it will be saved directly to our database.</p>
+            <div id="contact-msg" class="alert"></div>
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" novalidate>
+                <div class="form-group">
+                    <label for="contact-name">Your Name *</label>
+                    <input type="text" id="contact-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Your Email *</label>
+                    <input type="email" id="contact-email" placeholder="example@mail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Your Message / Feedback *</label>
+                    <textarea id="contact-message" rows="4" placeholder="Write at least 10 characters..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SpiceBite Restaurant. All Rights Reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
